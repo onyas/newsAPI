@@ -12,6 +12,7 @@ func SetupRouter() *gin.Engine {
 
 	// 添加 Get 请求路由
 	router.GET("/", handler.IndexPage)
+	router.POST("/auth", handler.CreateJwt)
 
 	conversationRouter := router.Group("/chat/conversations")
 	{

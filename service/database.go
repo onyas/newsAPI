@@ -25,7 +25,7 @@ func init() {
 	DbEngin.SetMaxOpenConns(2)
 
 	//自动Sync
-	err = DbEngin.Sync2(new(model.Conversation), new(model.Contact))
+	err = DbEngin.Sync2(new(model.Conversation), new(model.Contact), new(model.User))
 	if nil != err {
 		log.Fatal(err.Error())
 	}
